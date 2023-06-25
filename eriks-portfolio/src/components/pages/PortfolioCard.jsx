@@ -1,3 +1,4 @@
+//TODO: Fix react icons
 import { BiLinkExternal } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 
