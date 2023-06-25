@@ -6,17 +6,20 @@ import React from 'react';
 
 export default function Contact() {
   return (
-  <form>
-    <label htmlfor="name">Name:</label>
-    <input type="text" id="name" name="name" required/>
-
-    <label htmlfor="email">Email:</label>
-    <input type="email" id="email" name="email" required/>
-
-    <label htmlfor="message">Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-
-    <input type="submit" value="Submit"/>
-  </form>
+    <div>
+      <h1>Contact</h1>
+      <form>
+        <label htmlfor="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+        <label htmlfor="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label htmlfor="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   );
 }
