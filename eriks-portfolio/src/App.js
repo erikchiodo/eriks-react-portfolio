@@ -1,5 +1,5 @@
 import React from "react";
-import PortfolioContainer from "./components/utils/RenderTab";
+import PortfolioContainer from "./utils/RenderTab";
 
 const App = () => <PortfolioContainer />;
 

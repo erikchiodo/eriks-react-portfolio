@@ -1,4 +1,5 @@
 import PortfolioCard from "./PortfolioCard";
+import { Grid } from "@mui/material";
 
 import Mealy from "../assets/Mealy.png";
 import DateNight from "../assets/DateNight.png";
@@ -59,11 +60,10 @@ export default function Portfolio() {
   ];
 
   return (
-    <section>
-      <h2>Projects</h2>
-      <div>
-        {assignments.map((p) => {
-          return (
+    <Grid container spacing={2}>
+      {assignments.map((p) => {
+        return (
+          <Grid item xs={4}>
             <PortfolioCard
               title={p.title}
               description={p.description}
@@ -71,9 +71,9 @@ export default function Portfolio() {
               image={p.image}
               deployedApp={p.deployedApp}
             />
-          );
-        })}
-      </div>
-    </section>
+          </Grid>
+        );
+      })}
+    </Grid>
   );
 }
