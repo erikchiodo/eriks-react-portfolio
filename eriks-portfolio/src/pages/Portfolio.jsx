@@ -1,4 +1,5 @@
 import PortfolioCard from "./PortfolioCard";
+import Footer from "../components/Footer";
 import { Grid } from "@mui/material";
 
 import Mealy from "../assets/Mealy.png";
@@ -23,7 +24,7 @@ export default function Portfolio() {
       image: DateNight,
       description:
         "This is an application that that allows users to plan the perfect date night.",
-      gitHubLink: "",
+      gitHubLink: "https://github.com/erikchiodo/date-night-project",
       deployedApp: "https://erikchiodo.github.io/date-night-project/",
     },
     {
@@ -47,7 +48,7 @@ export default function Portfolio() {
       description:
         "This application is another portfolio page. See how it differs from this application.",
       gitHubLink: "https://github.com/erikchiodo/eriks-responsive-portfolio",
-      deployedApp: "",
+      deployedApp: "https://erikchiodo.github.io/challenge-2/",
     },
     {
       title: "Erik's Employee Tracker",
@@ -55,7 +56,8 @@ export default function Portfolio() {
       description:
         "This application allows users to keep track of their employees, managers, jobs, and salaries.",
       gitHubLink: "https://github.com/erikchiodo/eriks-employee-tracker",
-      deployedApp: "",
+      deployedApp:
+        "https://drive.google.com/file/d/1fMGY5W93HtbufvE7C0NSYDOa-kdjDMwq/view",
     },
   ];
 
@@ -67,7 +69,7 @@ export default function Portfolio() {
             <PortfolioCard
               title={p.title}
               description={p.description}
-              githubLink={p.gitHubLink}
+              gitHubLink={p.gitHubLink}
               image={p.image}
               deployedApp={p.deployedApp}
             />
@@ -75,5 +77,6 @@ export default function Portfolio() {
         );
       })}
     </Grid>
+    // <Footer/>
   );
 }

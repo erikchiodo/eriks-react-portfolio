@@ -8,7 +8,8 @@ export default function Resume() {
   return (
     <Stack spacing={2}>
       <Typography variant="body1">
-        Download my <a href="../assets/resume.pdf">Resume</a>
+        Download my <a href="../assets/resume.pdf">Resume</a> 
+        {/* Add listener to Resume, to hit express endpoint*/}
       </Typography>
 
       <Stack spacing={0}>

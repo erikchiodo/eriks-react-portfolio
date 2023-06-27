@@ -5,6 +5,7 @@ import { Stack, Typography } from "@mui/material";
 export default function About() {
   return (
     <Stack spacing={1}>
+      <img src="../assets/Self_Image.png" alt="Self" />
       <Typography variant="body1">Hello, my name is Erik Chiodo.</Typography>
 
       <Typography variant="body1">
