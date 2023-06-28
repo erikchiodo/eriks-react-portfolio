@@ -1,22 +1,53 @@
-//TODO: For Name, Email Address, and Message, if user clicks in box and clicks out without filling in information, produce error saying "X is required". Clear error once user starts entering information
-//TODO: Add Regex Validation that checks for valid email input. If not valid input, produce error saying "Enter Valid Email" Add onblur
-import React from "react";
-
+import React, { useState } from "react";
 import { Box, Button, Stack, TextField } from "@mui/material";
 
 export default function Contact() {
-  //  const [errors, setErrors] = useState({
-  //    name: "",
-  //    email: "",
-  //    message: "",
-  //  });
 
-  //  const validateEmail = (str) => {
-  //    return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-  //      str
-  //    );
-  //  };
+const validateEmail = (str) => {
+  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(str);
+};
 
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+const [errorMessage, setErrorMessage] = useState("");
+
+const handleInputChange = (e) => {
+  const { target } = e;
+  const inputType = target.name;
+  const inputValue = target.value;
+
+  if (inputType === "name") {
+    setName(inputValue);
+  } else if (inputType === "email") {
+    setEmail(inputValue);
+  } else if (inputType === "message") {
+    setMessage(inputValue);
+  } else {
+    errorMessage(inputValue);
+  }
+};
+
+const handleFormSubmit = (e) => {
+  e.preventDefault();
+  if (!validateEmail(email) & !email) {
+    setErrorMessage("Email is invalid");
+    return;
+  }
+  if (!name) {
+    setErrorMessage(
+      `Name is required`
+    );
+    return;
+  }
+  if (!message) {
+    setErrorMessage(`Message is required`);
+    return;
+  }
+  setName("");
+  setEmail("");
+  setMessage("");
+};
 
   return (
     <Box
@@ -31,7 +62,7 @@ export default function Contact() {
             id="name"
             label="Name"
             variant="outlined"
-            // onChange={handleInputChange}
+            onChange={handleInputChange}
             fullWidth
           />
 
@@ -39,7 +70,7 @@ export default function Contact() {
             id="email"
             label="Email"
             variant="outlined"
-            // onChange={handleInputChange}
+            onChange={handleInputChange}
             fullWidth
           />
 
@@ -48,12 +79,12 @@ export default function Contact() {
             label="Message"
             multiline
             rows={4}
-            // onChange={handleInputChange}
+            onChange={handleInputChange}
             variant="outlined"
             fullWidth
           />
 
-          <Button type="submit" variant="contained">
+          <Button type="submit" onClick={handleFormSubmit} variant="contained">
             Send
           </Button>
         </Stack>
