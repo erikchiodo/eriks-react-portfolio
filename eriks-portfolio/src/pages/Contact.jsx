@@ -24,7 +24,7 @@ const handleInputChange = (e) => {
   } else if (inputType === "message") {
     setMessage(inputValue);
   } else {
-    errorMessage(inputValue);
+    setErrorMessage(inputValue);
   }
 };
 
@@ -89,6 +89,11 @@ const handleFormSubmit = (e) => {
           </Button>
         </Stack>
       </form>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
     </Box>
   );
 }
