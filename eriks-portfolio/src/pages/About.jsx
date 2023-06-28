@@ -14,7 +14,7 @@ export default function About() {
         />
         <Typography variant="body1">Hi! My name is Erik Chiodo.</Typography>
         <Typography variant="body1">
-          I work as Product Owner at JP Morgan for a product Embedded Banking (EB), which is an emerging industry that looks to extend banking services to tech partners who want to offer financial services to small & medium sized business through their platforms. I manage a team called Coda who is responsible for reference data management, CRM Integrations, and User Authentication. I also work closely with our Architecture team who I help drive forward new product initiatives that require arch design/analysis.
+          I work as Product Owner at JP Morgan for a product Embedded Banking (EB), which is an emerging industry that looks to extend banking services to tech partners who want to offer financial services to small & medium sized business through their platforms. I manage a team called Coda who is responsible for reference data management, CRM Integrations, and User Authentication.
         </Typography>
 
         <Typography variant="body1">
