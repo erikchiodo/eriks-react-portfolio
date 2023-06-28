@@ -9,7 +9,9 @@ export default function Footer() {
         <a href="https://github.com/erikchiodo">
           <BsGithub fontSize={35} style={{ marginRight: "15px" }} />
         </a>
-        <a href="https://www.linkedin.com/in/erik-chiodo-96641453/">
+        <a
+          href="https://www.linkedin.com/in/erik-chiodo-96641453/"
+        >
           <BsLinkedin fontSize={35} style={{ marginRight: "15px" }} />
         </a>
         <a href="https://instagram.com/mynoodpics">

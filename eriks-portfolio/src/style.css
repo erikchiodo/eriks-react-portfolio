@@ -12,3 +12,12 @@ img {
   height: 220px;
   border-radius: 4px;
 }
+
+.portfolio-image {
+  transition: filter 0.3s ease-in-out;
+}
+
+.portfolio-image:hover {
+   transform: scale(1.1);
+   z-index: 1;
+}

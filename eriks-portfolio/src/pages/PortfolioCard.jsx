@@ -1,6 +1,6 @@
-//TODO: Fix react icons - use absolute positioning and set
 import { BsGithub } from "react-icons/bs";
 import { Box, Stack, Typography } from "@mui/material";
+import "../style.css";
 
 export default function PortfolioCard({
   title,
@@ -18,7 +18,7 @@ export default function PortfolioCard({
     >
       <Stack spacing={1}>
         <a href={deployedApp} target="_blank" rel="noreferrer">
-          <img src={image} alt={title} />
+          <img className="portfolio-image" src={image} alt={title} />
         </a>
 
         <Stack spacing={0}>
@@ -27,7 +27,11 @@ export default function PortfolioCard({
         </Stack>
 
         <Stack direction="row" spacing={1}>
-          <a href={gitHubLink} target="_blank" rel="noreferrer">
+          <a
+            href={gitHubLink}
+            target="_blank"
+            rel="noreferrer"
+          >
             <BsGithub fontSize={40} />
           </a>
         </Stack>

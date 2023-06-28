@@ -76,6 +76,5 @@ export default function Portfolio() {
         );
       })}
     </Grid>
-    // <Footer/>
   );
 }
