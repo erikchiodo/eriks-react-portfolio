@@ -14,7 +14,7 @@ const [errorMessage, setErrorMessage] = useState("");
 
 const handleInputChange = (e) => {
   const { target } = e;
-  const inputType = target.name;
+  const inputType = target.id;
   const inputValue = target.value;
 
   if (inputType === "name") {
@@ -30,7 +30,7 @@ const handleInputChange = (e) => {
 
 const handleFormSubmit = (e) => {
   e.preventDefault();
-  if (!validateEmail(email) & !email) {
+  if (!validateEmail(email) || !email) {
     setErrorMessage("Email is invalid");
     return;
   }
