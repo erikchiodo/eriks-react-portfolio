@@ -2,6 +2,11 @@ body {
   margin: 0;
 }
 
+.selfImage {
+  width: 175px;
+  height: 400px;
+}
+
 img {
   width: 100%;
   height: 220px;

@@ -5,6 +5,19 @@ import React from "react";
 import { Box, Button, Stack, TextField } from "@mui/material";
 
 export default function Contact() {
+  //  const [errors, setErrors] = useState({
+  //    name: "",
+  //    email: "",
+  //    message: "",
+  //  });
+
+  //  const validateEmail = (str) => {
+  //    return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+  //      str
+  //    );
+  //  };
+
+
   return (
     <Box
       sx={{
@@ -18,7 +31,7 @@ export default function Contact() {
             id="name"
             label="Name"
             variant="outlined"
-            onblur="fieldRequired" //TODO create function to display Error when blank
+            // onChange={handleInputChange}
             fullWidth
           />
 
@@ -26,7 +39,7 @@ export default function Contact() {
             id="email"
             label="Email"
             variant="outlined"
-            onblur="fieldRequired" //TODO create function to display Error when blank
+            // onChange={handleInputChange}
             fullWidth
           />
 
@@ -35,7 +48,7 @@ export default function Contact() {
             label="Message"
             multiline
             rows={4}
-            onblur="emailValidator" //TODO create function to display Error when blank or email is wrong
+            // onChange={handleInputChange}
             variant="outlined"
             fullWidth
           />

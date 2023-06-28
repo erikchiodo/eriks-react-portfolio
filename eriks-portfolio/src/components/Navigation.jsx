@@ -11,8 +11,14 @@ export default function Navigation({ title, handlePageChange }) {
         sx={{
           backgroundColor: "#ececec",
           p: 2,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
+        <Typography variant="h4" className="header">
+          Erik Chiodo's Site
+        </Typography>
         <Stack direction="row" spacing={3}>
           <a
             href="#about"

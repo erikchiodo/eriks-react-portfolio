@@ -17,3 +17,8 @@ a.nav-link:focus {
 a.nav-link:active {
   color: #000000;
 }
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+}

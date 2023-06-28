@@ -1,20 +1,19 @@
-// TODO: Ensure react icons works
-// TODO: Link Footer with pages. Footer should be linked to each page (About, Contact, Portfolio, Resume)
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
-import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import "./style.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="footer-container">
       <div className="footer-links">
-        <a href="/" target="_blank">
-          <BsGithub fontSize={22} />
+        <a href="https://github.com/erikchiodo">
+          <BsGithub fontSize={35} style={{ marginRight: "15px" }} />
         </a>
-        <a href="/" target="_blank">
-          <BsLinkedin fontSize={22} />
+        <a href="https://www.linkedin.com/in/erik-chiodo-96641453/">
+          <BsLinkedin fontSize={35} style={{ marginRight: "15px" }} />
         </a>
-        <a href="/" target="_blank">
-          <BsTwitter fontSize={22} />
+        <a href="https://instagram.com/mynoodpics">
+          <BsInstagram fontSize={35} />
         </a>
       </div>
     </footer>

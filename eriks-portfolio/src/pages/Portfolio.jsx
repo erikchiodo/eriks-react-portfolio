@@ -1,11 +1,10 @@
 import PortfolioCard from "./PortfolioCard";
-import Footer from "../components/Footer";
 import { Grid } from "@mui/material";
 
 import Mealy from "../assets/Mealy.png";
 import DateNight from "../assets/DateNight.png";
 import NoteTaker from "../assets/NoteTaker.png";
-import SocialNetworkApp from "../assets/socialNetworkApp.png";
+import TextEditor from "../assets/TextEditor.png";
 import ResponsivePortfolio from "../assets/ResponsivePortfolio.png";
 import EmployeeTracker from "../assets/EmployeeTracker.png";
 
@@ -32,15 +31,15 @@ export default function Portfolio() {
       image: NoteTaker,
       description: "This is an application allows users to post and save notes",
       gitHubLink: "https://github.com/erikchiodo/eriks-note-taker",
-      deployedApp: "https://git.heroku.com/eriks-note-taker.git",
+      deployedApp: "https://eriks-note-taker.herokuapp.com/",
     },
     {
-      title: "Erik's Social Network API",
-      image: SocialNetworkApp,
+      title: "Erik's Text Editor",
+      image: TextEditor,
       description:
-        "This is an application that allows to keep track of their friends, thoughts, and reactions",
-      gitHubLink: "https://github.com/erikchiodo/eriks-social-network-api",
-      deployedApp: "https://git.heroku.com/eriks-social-network-api.git",
+        "This is an application that allows to write text and save the results",
+      gitHubLink: "https://github.com/erikchiodo/eriks-text-editor",
+      deployedApp: "https://eriks-text-editor-3e96a5063d90.herokuapp.com/",
     },
     {
       title: "Erik's Responsive Portfolio",
